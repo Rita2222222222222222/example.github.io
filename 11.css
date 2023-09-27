@@ -1,0 +1,31 @@
+﻿body{
+//background: url(0.jpg) no-repeat center center fixed;
+background-size: cover;
+background-color:#E6E6FA; 
+}
+
+H1 {
+  color: #EE82EE;
+  font-size: 200%;
+  font-family: Andale Mono, monospace;
+  text-align: center;
+}
+H3 {
+  color: #EE82EE;
+  font-size: 100%;
+  font-family: Andale Mono, monospace;
+  text-align: center;
+}
+P {
+color: #191970;
+  font-size: 100%;
+  font-family: Andale Mono, monospace;
+  text-align: center;
+  padding-left: 20px;
+}
+label{color: #191970;
+  font-size: 100%;
+  font-family: Andale Mono, monospace;
+  text-align: center;
+  padding-left: 20px;
+}

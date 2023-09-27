@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+<title>Расписание и встречи</title>
+<link rel="stylesheet" href="11.css">
+</head>
+<body>
+<section id="calendar">
+<center>
+ <h2>Расписание и встречи</h2>
+ <!-- Форма для создания новой встречи -->
+ <form>
+<center>
+ <h3>Новая встреча</h3>
+ <label for="meeting-title">Заголовок встречи:</label>
+ <input type="text" id="meeting-title" name="meeting-title" required>
+ <label for="meeting-date">Дата и время:</label>
+ <input type="datetime-local" id="meeting-date" name="meeting-date"
+required>
+ <label for="meeting-location">Место:</label>
+ <input type="text" id="meeting-location" name="meeting-location">
+ <button type="submit">Создать встречу</button>
+ </form>
+ <!-- Список предстоящих встреч -->
+<center>
+ <h3>Предстоящие встречи</h3>
+
+ <li>
+ <strong>Совещание с руководством</strong>
+ <p>Дата и время: 2023-09-20 15:00</p>
+ <p>Место: Конференц-зал</p>
+ </li>
+ <li>
+ <strong>Встреча с поставщиком</strong>
+ <p>Дата и время: 2023-09-22 10:30</p>
+ <p>Место: Офис 301</p>
+ </li>
+ <!-- Архив встреч -->
+<center>
+ <h3>Архив встреч</h3>
+ <li>
+ <strong>Совещание с партнерами</strong>
+ <p>Дата и время: 2023-09-10 14:00</p>
+ <p>Место: Конференц-зал</p>
+ </li>
+ <li>
+ <strong>Встреча с клиентом</strong>
+ <p>Дата и время: 2023-09-15 11:15</p>
+ <p>Место: Офис 302</p>
+ </li>
+
+</section>
+8
+<br><br>
+ <footer><center>
+ <p>&copy; 2023 Расписание и встречи</p>
+ </footer>
+</body>
+</html>
