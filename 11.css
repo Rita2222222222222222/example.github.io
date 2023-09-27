@@ -29,3 +29,17 @@ label{color: #191970;
   text-align: center;
   padding-left: 20px;
 }
+strong{color: #4B0082;
+  font-size: 100%;
+  font-family: Andale Mono, monospace;
+  text-align: center;
+  padding-left: 20px;
+font-weight: bold;
+}
+H2 {
+  color: #4B0082;
+  font-size: 150%;
+  font-family: Andale Mono, monospace;
+  text-align: center;
+font-weight: bold;
+}
