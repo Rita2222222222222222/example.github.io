@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление документами</title>
+    <link rel="stylesheet" href="11.css">
+</head>
+<body>
+
+    <header>
+        <h1>Система управления документами</h1>
+    </header>
+<br><br>
+    <nav>
+        <!-- Меню навигации, если необходимо -->
+    </nav>
+
+    <section>
+        <h2>Список документов</h2>
+        <ul id="documentList">
+            <!-- Здесь будут отображаться документы -->
+            <p>Договор №123 (на отправку)</p>
+            <p>Протокол собрания акционеров (на подпись)</p>
+            <p>Служебная записка от 01.11.2023 (на отправку)</p>
+            <p>Заявление на отпуск (на подпись)</p>
+        </ul>
+<br><br><br>
+    </section>
+
+    <section>
+        <h2>Добавить новый документ</h2>
+<br><br>
+        <form id="addDocumentForm">
+            <!-- Форма для добавления нового документа -->
+            <center><label for="documentTitle">Заголовок документа:</label>
+            <input type="text" id="documentTitle" name="documentTitle" required>
+
+            <!-- Выбор типа документа -->
+            <label for="documentType">Тип документа:</label>
+            <select id="documentType" name="documentType">
+                <option value="Отправка">На отправку</option>
+                <option value="Подпись">На подпись</option>
+            </select>
+
+            <!-- Кнопка для отправки формы -->
+            <button type="button" onclick="addDocument()">Добавить документ</button>
+        </form>
+    </section>
+<br><br><br><br><br><br><br><br>
+    <footer>
+        <p>&copy; 2023 Управление документами</p>
+    </footer>
+
+    <script>
+        // Пример скрипта для добавления документа
+        function addDocument() {
+            var documentTitle = document.getElementById('documentTitle').value;
+            var documentType = document.getElementById('documentType').value;
+
+            // Проверка наличия заголовка
+            if (documentTitle.trim() !== '') {
+                var documentList = document.getElementById('documentList');
+                var newDocumentItem = document.createElement('li');
+                newDocumentItem.textContent = documentTitle + ' (' + documentType + ')';
+                documentList.appendChild(newDocumentItem);
+
+                // Очистка формы после добавления
+                document.getElementById('addDocumentForm').reset();
+            } else {
+                alert('Введите заголовок документа');
+            }
+        }
+    </script>
+
+</body>
+</html>
