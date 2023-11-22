@@ -15,9 +15,7 @@ button {
   cursor: pointer;
 }
 
-button:submit {
-  background-color: #45a049;
-}
+
 
 H1 {
   color: #EE82EE;
