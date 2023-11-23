@@ -1,13 +1,41 @@
-﻿body{
+body{
 //background: url(0.jpg) no-repeat center center fixed;
 background-size: cover;
 background-color:#E6E6FA; 
 }
 
+#addDocumentForm {
+  width: 30%;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #E6E6FA;
+}
 
+#addDocumentForm label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
 
-button {
-   background-color:#EE82EE; 
+#addDocumentForm input[type="text"],
+
+#addDocumentForm select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+#addDocumentForm select {
+  cursor: pointer;
+}
+
+#addDocumentForm button {
+  
+  cursor: pointer;
+background-color:#EE82EE; 
     border: none;
     color: white;
     padding: 8px 18px;
@@ -17,7 +45,23 @@ button {
     font-size: 13px;
 }
 
-
+#addDocumentForm button:hover {
+  background-color: #FF00FF;
+}
+button {
+cursor: pointer;
+    background-color:#EE82EE; 
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+}
+button:hover {
+  background-color: #FF00FF;
+}
 
 H1 {
   color: #EE82EE;
