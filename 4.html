@@ -11,7 +11,7 @@
     <header>
         <h1>Система управления документами</h1>
     </header>
-<br><br>
+    <br><br>
     <nav>
         <!-- Меню навигации, если необходимо -->
     </nav>
@@ -20,34 +20,36 @@
         <h2>Список документов</h2>
         <ul id="documentList">
             <!-- Здесь будут отображаться документы -->
-            <p>Договор №123 (на отправку)</p>
-            <p>Протокол собрания акционеров (на подпись)</p>
-            <p>Служебная записка от 01.11.2023 (на отправку)</p>
-            <p>Заявление на отпуск (на подпись)</p>
+            <p>Договор №123 (на отправку)</p></li>
+            <p>Протокол собрания акционеров (на подпись)</p></li>
+            <p>Служебная записка от 01.11.2023 (на отправку)</p></li>
+            <p>Заявление на отпуск (на подпись)</p></li>
         </ul>
-<br><br><br>
+        <br>
     </section>
 
     <section>
         <h2>Добавить новый документ</h2>
-<br><br>
+        
         <form id="addDocumentForm">
             <!-- Форма для добавления нового документа -->
-            <center><label for="documentTitle">Заголовок документа:</label>
-            <input type="text" id="documentTitle" name="documentTitle" required>
+            <center>
+                <label for="documentTitle">Заголовок документа:</label>
+                <input type="text" id="documentTitle" name="documentTitle" required>
 
-            <!-- Выбор типа документа -->
-            <label for="documentType">Тип документа:</label>
-            <select id="documentType" name="documentType">
-                <option value="Отправка">На отправку</option>
-                <option value="Подпись">На подпись</option>
-            </select>
+                <!-- Выбор типа документа -->
+                <label for="documentType">Тип документа:</label>
+                <select id="documentType" name="documentType">
+                    <option value="На отправку">На отправку</option>
+                    <option value="На подпись">На подпись</option>
+                </select>
 
-            <!-- Кнопка для отправки формы -->
-            <button type="button" onclick="addDocument()">Добавить документ</button>
+                <!-- Кнопка для отправки формы -->
+                <button type="button" onclick="addDocument()">Добавить документ</button>
+            </center>
         </form>
     </section>
-<br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
     <footer>
         <p>&copy; 2023 Управление документами</p>
     </footer>
@@ -62,7 +64,7 @@
             if (documentTitle.trim() !== '') {
                 var documentList = document.getElementById('documentList');
                 var newDocumentItem = document.createElement('li');
-                newDocumentItem.textContent = documentTitle + ' (' + documentType + ')';
+                newDocumentItem.innerHTML = "<p>" + documentTitle + ' (' + documentType + ')' + "</p>";
                 documentList.appendChild(newDocumentItem);
 
                 // Очистка формы после добавления
