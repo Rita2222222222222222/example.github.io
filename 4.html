@@ -69,9 +69,36 @@
 
                 // Очистка формы после добавления
                 document.getElementById('addDocumentForm').reset();
+
+                // Сохранение в файл
+                saveDocumentsToFile();
             } else {
                 alert('Введите заголовок документа');
             }
+        }
+
+        // Сохранение информации о документах в файл
+        function saveDocumentsToFile() {
+            var documentList = document.getElementById('documentList');
+            var documents = [];
+
+            // Итерация по элементам списка и сбор информации
+            for (var i = 0; i < documentList.children.length; i++) {
+                var documentText = documentList.children[i].textContent;
+                documents.push(documentText);
+            }
+
+            // Преобразование массива в строку
+            var fileContent = documents.join('\n');
+
+            // Создание Blob и создание ссылки для скачивания
+            var blob = new Blob([fileContent], { type: 'text/plain' });
+            var a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'documentList.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         }
     </script>
 
