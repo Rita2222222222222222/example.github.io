@@ -67,7 +67,29 @@
           document.getElementById("meeting-title").value = "";
           document.getElementById("meeting-date").value = "";
           document.getElementById("meeting-location").value = "";
+
+          // Сохраняем встречу в файл
+          saveMeetingToFile(title, date, location);
+        }
+
+        function saveMeetingToFile(title, date, location) {
+          var data = {
+            title: title,
+            date: date,
+            location: location
+          };
+
+          var jsonData = JSON.stringify(data);
+
+          var blob = new Blob([jsonData], { type: 'application/json' });
+          var a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = 'meetings.txt';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
         }
       </script>
     </body>
     </html>
+
